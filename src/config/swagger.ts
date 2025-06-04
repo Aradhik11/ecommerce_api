@@ -1,17 +1,5 @@
 import swaggerJsdoc from 'swagger-jsdoc';
 
-// Auto-detect server URL
-const getServerUrl = () => {
-  if (process.env.NODE_ENV === 'production') {
-    // Try to get from environment variable first
-    if (process.env.RENDER_EXTERNAL_URL) {
-      return `${process.env.RENDER_EXTERNAL_URL}/api`;
-    }
-    // Fallback to your known Render URL
-    return 'https://ecommerce-api-ljej.onrender.com/api';
-  }
-  return 'http://localhost:3000/api';
-};
 
 const options = {
   definition: {
@@ -26,9 +14,16 @@ const options = {
       }
     },
     servers: [
+      
       {
-        url: getServerUrl(),
-        description: process.env.NODE_ENV === 'production' ? 'Production server' : 'Development server'
+        url: 'https://ecommerce-api-ljej.onrender.com/api',
+
+        description: 'Production server'
+      },
+      {
+        url: 'http://localhost:3000/api',
+
+        description: 'Development server'
       }
     ],
     components: {
