@@ -26,8 +26,8 @@ A comprehensive e-commerce backend built with **TypeScript**, **Node.js**, **Exp
 ### 1. Clone and Install
 
 ```bash
-git clone <repository-url>
-cd ecommerce-backend
+git clone https://github.com/Aradhik11/ecommerce_api.git
+cd ecommerce
 npm install
 ```
 
@@ -90,7 +90,7 @@ Authorization: Bearer <your-jwt-token>
 
 ### Default Users (from seed)
 - **Admin**: `admin@ecommerce.com` / `admin123`
-- **User**: `user@example.com` / `user123`
+- **User**: `john.doe@example.com` / `user123`
 
 ## 🔌 API Endpoints
 
