@@ -9,9 +9,9 @@ A comprehensive e-commerce backend built with **TypeScript**, **Node.js**, **Exp
 - **Shopping Cart**: Add, update, remove products with quantity management
 - **Order System**: Place orders from cart with stock management
 - **Wishlist**: Save products for later purchase
-- **API Documentation**: Comprehensive Swagger/OpenAPI documentation
+- **API Documentation**: Comprehensive Swagger documentation
 - **Type Safety**: Full TypeScript implementation
-- **Database**: Prisma ORM with PostgreSQL/SQLite support
+- **Database**: Prisma ORM with PostgreSQL support
 - **Validation**: Request validation with express-validator
 - **Security**: Helmet, CORS, and JWT security measures
 
@@ -75,11 +75,13 @@ npm run dev
 ```
 
 The server will start on `http://localhost:3000`
+The Live server will start on `https://ecommerce-api-ljej.onrender.com`
 
 ## 📚 API Documentation
 
 ### Swagger UI
 Access comprehensive API documentation at: `http://localhost:3000/api-docs`
+Access comprehensive Live API documentation at: `https://ecommerce-api-ljej.onrender.com/api-docs`
 
 ### Authentication
 
