@@ -1,5 +1,18 @@
 import swaggerJsdoc from 'swagger-jsdoc';
 
+// Auto-detect server URL
+const getServerUrl = () => {
+  if (process.env.NODE_ENV === 'production') {
+    // Try to get from environment variable first
+    if (process.env.RENDER_EXTERNAL_URL) {
+      return `${process.env.RENDER_EXTERNAL_URL}/api`;
+    }
+    // Fallback to your known Render URL
+    return 'https://ecommerce-api-ljej.onrender.com/api';
+  }
+  return 'http://localhost:3000/api';
+};
+
 const options = {
   definition: {
     openapi: '3.0.0',
@@ -9,13 +22,13 @@ const options = {
       description: 'A comprehensive e-commerce backend API with authentication, products, cart, orders, and wishlist functionality',
       contact: {
         name: 'API Support',
-        email: 'support@ecommerce.com'
+        email: 'aradhik11@gmail.com'
       }
     },
     servers: [
       {
-        url: 'http://localhost:3000/api',
-        description: 'Development server'
+        url: getServerUrl(),
+        description: process.env.NODE_ENV === 'production' ? 'Production server' : 'Development server'
       }
     ],
     components: {
