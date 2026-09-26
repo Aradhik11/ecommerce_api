@@ -1,6 +1,7 @@
 {
   "name": "ecommerce-backend-ts",
   "version": "1.0.0",
+  "author": "Khalid Adeboye",
   "description": "E-commerce backend API with TypeScript, Express, Prisma, and Swagger",
   "main": "dist/src/server.js",
   "scripts": {
